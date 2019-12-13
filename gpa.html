@@ -7,7 +7,7 @@
 </head>
 
 
-<body ng-app = "studentsApp2">
+<body ng-app = "studentsApp">
 
 
 <div class="container">
@@ -27,7 +27,7 @@
 
 
 
-    <div ng-controller = "allCtr2">
+    <div ng-controller = "allCtr">
 
     <h2>Advisees</h2>
        <p><input type='text' ng-model='search_text' > Enter search text</p>
@@ -49,8 +49,8 @@
   </div>   
 
   <script>
-      var app = angular.module('studentsApp2', []);
-      app.controller('allCtr2', function($scope, $http) {
+      var app = angular.module('studentsApp', []);
+      app.controller('allCtr', function($scope, $http) {
   
           $http.get("students.json")          
           .then(function (response) {
